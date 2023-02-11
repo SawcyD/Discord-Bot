@@ -25,6 +25,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
+          cache-dependency-path: root/Discord-Bot/package-lock.json
       - run: npm ci
       - run: npm run test --if-present
       - name: SSH Remote Commands
