@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.HOST_USERNAME }}
           script: |
             pm2 delete all
-            cd /root/Discord-Bot/src
+            cd /root/Discord-Bot
             git pull
             npm install
             pm2 start index.js
